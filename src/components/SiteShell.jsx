@@ -63,13 +63,6 @@ export default function SiteShell({ children }) {
               <PhoneCall className="h-4 w-4" />
               Join on Zoom
             </a>
-
-            <span className="text-white/40">•</span>
-
-            <span className="inline-flex items-center gap-2 text-white/90">
-              {JOIN.phone} <span className="text-white/40">•</span> Meeting room {JOIN.meeting}
-              <span className="text-white/40">•</span> Code {JOIN.code}
-            </span>
           </div>
 
           <a

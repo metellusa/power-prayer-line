@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, BookOpen, HandHeart, Users, Clock, Sparkles, Globe2 } from "lucide-react";
+import { ArrowRight, PhoneCall, BookOpen, HandHeart, Users, Sparkles, Globe2 } from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
 import Card from "../components/Card";
@@ -117,17 +117,14 @@ export default function Home() {
         <Reveal delay={0.05}>
           <Card title="Get Involved">
             <p className="text-lg">
-              If you are genuinely looking for spiritual growth, then you are in great company!
+              If you are genuinely seeking spiritual growth, then you are in great company!
             </p>
             <p className="mt-3">
-              Our members share this goal and that is what keeps us going. We seek to glorify God by ardently studying His Word, by striving to follow Jesus Christ&apos;s footsteps daily and by promoting His word in the various communities that we are involved in.
+              Our members share this goal, and it is what keeps us going. We seek to glorify God by ardently studying His Word, striving daily to follow in the footsteps of Jesus Christ, and sharing His message within the communities we serve.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <Button as="a" href="/latest-meditations" variant="primary" className="w-full sm:w-auto">
-                Latest Meditations <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button as="a" href="/our-creed" variant="secondary" className="w-full sm:w-auto">
-                Our Creed
+              <Button as="a" href="/our-creed" variant="primary" className="w-full sm:w-auto">
+                Our Creed <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
           </Card>
@@ -141,7 +138,17 @@ export default function Home() {
             <div className="text-white">
               <div className="text-2xl md:text-3xl font-black">Join us this week.</div>
               <div className="mt-2 text-white/80 max-w-2xl">
-                Weekdays: noon–1:30pm and 9:00pm–10:05pm (EST). Dial {JOIN.phone} • Code {JOIN.code}.
+                Weekdays: noon to 1:30pm and 9:00pm to 10:00pm (EST).
+                <div>Sundays: 5:00pm to 7:00pm (EST)</div>
+                <a
+                  href={JOIN.zoomUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-white/90 underline decoration-white/30 hover:decoration-white hover:text-white transition"
+                  title="Join on Zoom"
+                ><PhoneCall className="h-4 w-4" />
+                  Join on Zoom
+                </a>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">

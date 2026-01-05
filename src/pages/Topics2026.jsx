@@ -1,9 +1,8 @@
 import React from "react";
-import { CalendarDays, ChevronLeft, ChevronRight, RotateCcw, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, RotateCcw, Info } from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
 import Card from "../components/Card";
-import Badge from "../components/ui/Badge";
 import Button from "../components/ui/Button";
 
 // Source list (keep editing here)
@@ -86,8 +85,18 @@ const topicsRaw = [
 ];
 
 const monthMap = {
-  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
-  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+  Jan: 0,
+  Feb: 1,
+  Mar: 2,
+  Apr: 3,
+  May: 4,
+  Jun: 5,
+  Jul: 6,
+  Aug: 7,
+  Sep: 8,
+  Oct: 9,
+  Nov: 10,
+  Dec: 11,
 };
 
 function parseTopic(s) {
@@ -116,9 +125,11 @@ function parseTopic(s) {
 }
 
 function sameDay(a, b) {
-  return a.getFullYear() === b.getFullYear() &&
+  return (
+    a.getFullYear() === b.getFullYear() &&
     a.getMonth() === b.getMonth() &&
-    a.getDate() === b.getDate();
+    a.getDate() === b.getDate()
+  );
 }
 
 // Topics are Sun -> Sat, so weeks must start Sunday.
@@ -183,26 +194,45 @@ function clampDate(d, min, max) {
 
 function dayKeyLocal(d) {
   // Stable local key; avoids UTC shifting from toISOString()
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
+    d.getDate()
+  ).padStart(2, "0")}`;
+}
+
+function getTopicForWeek(topics, weekStart, weekEnd) {
+  // For this schedule, there should be exactly 1 per week.
+  return topics.find((t) => !(t.end < weekStart || t.start > weekEnd)) || null;
+}
+
+function splitTitleAndVerse(title) {
+  // "A New Beginning in God (Isaiah 43:18–19)"
+  const m = title.match(/^(.*)\s\(([^)]+)\)\s*$/);
+  return m ? { main: m[1], ref: m[2] } : { main: title, ref: "" };
 }
 
 export default function Topics2026() {
   const topics = React.useMemo(
-    () => topicsRaw.map(parseTopic).filter(Boolean).sort((a, b) => a.start - b.start),
+    () =>
+      topicsRaw
+        .map(parseTopic)
+        .filter(Boolean)
+        .sort((a, b) => a.start - b.start),
     []
   );
 
   const range = React.useMemo(() => {
     const min = topics[0]?.start ?? new Date(2026, 0, 4);
-    const max = topics[topics.length - 1]?.end ?? new Date(2027, 0, 2, 23, 59, 59, 999);
+    const max =
+      topics[topics.length - 1]?.end ?? new Date(2027, 0, 2, 23, 59, 59, 999);
     return { min, max };
   }, [topics]);
 
   const defaultSelectedDate = React.useMemo(() => {
     const now = new Date();
 
-    // If we're not inside the schedule range, default to first week of 2026 topics.
     if (topics.length === 0) return new Date(2026, 0, 4);
+
+    // If we're not inside the schedule range, default to first week of 2026 topics.
     if (now < range.min || now > range.max) return new Date(topics[0].start);
 
     const t = findTopicForDate(topics, now);
@@ -211,15 +241,29 @@ export default function Topics2026() {
 
   const [selectedDate, setSelectedDate] = React.useState(defaultSelectedDate);
 
-  const selectedWeekStart = React.useMemo(() => startOfWeekSunday(selectedDate), [selectedDate]);
-  const selectedWeekEnd = React.useMemo(() => addDays(selectedWeekStart, 6), [selectedWeekStart]);
+  const selectedWeekStart = React.useMemo(
+    () => startOfWeekSunday(selectedDate),
+    [selectedDate]
+  );
+  const selectedWeekEnd = React.useMemo(
+    () => addDays(selectedWeekStart, 6),
+    [selectedWeekStart]
+  );
 
-  const monthAnchor = React.useMemo(() => clampToMonthStart(selectedDate), [selectedDate]);
+  const monthAnchor = React.useMemo(
+    () => clampToMonthStart(selectedDate),
+    [selectedDate]
+  );
   const weeks = React.useMemo(() => buildMonthGrid(monthAnchor), [monthAnchor]);
 
-  const weekTopics = React.useMemo(() => {
-    return topics.filter((t) => !(t.end < selectedWeekStart || t.start > selectedWeekEnd));
-  }, [topics, selectedWeekStart, selectedWeekEnd]);
+  const selectedTopic = React.useMemo(
+    () => getTopicForWeek(topics, selectedWeekStart, selectedWeekEnd),
+    [topics, selectedWeekStart, selectedWeekEnd]
+  );
+
+  const selectedTopicParts = React.useMemo(() => {
+    return selectedTopic ? splitTitleAndVerse(selectedTopic.title) : { main: "", ref: "" };
+  }, [selectedTopic]);
 
   function goToTodayWeek() {
     const t = findTopicForDate(topics, new Date());
@@ -248,19 +292,15 @@ export default function Topics2026() {
     <div className="space-y-6">
       <Reveal>
         <Section eyebrow="POWER" title="2026 Topics">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge color="cyan">
-              <span className="inline-flex items-center gap-2">
-                <CalendarDays className="h-4 w-4" />
-                Interactive weekly calendar
-              </span>
-            </Badge>
-          </div>
+          <p className="text-lg">
+            These topics are preselected for the entire year (subject to change).
+            Tap any date to jump to that week.
+          </p>
         </Section>
       </Reveal>
 
-      <div className="grid gap-6 lg:grid-cols-3">
-        <Reveal className="lg:col-span-2">
+      <div className="grid gap-6">
+        <Reveal>
           <Card
             title={
               <div className="flex flex-wrap items-center justify-between gap-3">
@@ -271,11 +311,21 @@ export default function Topics2026() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <Button variant="secondary" className="px-3 py-2" onClick={() => navWeek(-1)} type="button">
+                  <Button
+                    variant="secondary"
+                    className="px-3 py-2"
+                    onClick={() => navWeek(-1)}
+                    type="button"
+                  >
                     <ChevronLeft className="h-4 w-4" />
                     Prev
                   </Button>
-                  <Button variant="secondary" className="px-3 py-2" onClick={() => navWeek(1)} type="button">
+                  <Button
+                    variant="secondary"
+                    className="px-3 py-2"
+                    onClick={() => navWeek(1)}
+                    type="button"
+                  >
                     Next
                     <ChevronRight className="h-4 w-4" />
                   </Button>
@@ -294,6 +344,31 @@ export default function Topics2026() {
             }
           >
             <div className="mt-2 glass rounded-4xl p-4">
+              {/* Week topic banner (embedded in the calendar card) */}
+              <div className="mb-4 rounded-3xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+                {selectedTopic ? (
+                  <div className="flex flex-col gap-1">
+                    <div className="text-xs font-bold tracking-[0.2em] uppercase text-power-blue dark:text-power-cyan">
+                      Topic for {formatShort(selectedWeekStart)} — {formatShort(selectedWeekEnd)}
+                    </div>
+
+                    <div className="text-lg font-black text-power-ink dark:text-white leading-snug">
+                      {selectedTopicParts.main}
+                    </div>
+
+                    {selectedTopicParts.ref ? (
+                      <div className="text-sm text-power-ink/70 dark:text-white/70">
+                        {selectedTopicParts.ref}
+                      </div>
+                    ) : null}
+                  </div>
+                ) : (
+                  <div className="text-sm text-power-ink/70 dark:text-white/70">
+                    No topic found for this week.
+                  </div>
+                )}
+              </div>
+
               <div className="flex items-center justify-between gap-3 mb-4">
                 <div className="text-sm font-semibold text-power-ink/70 dark:text-white/70">
                   {monthAnchor.toLocaleDateString(undefined, { month: "long", year: "numeric" })}
@@ -320,7 +395,6 @@ export default function Topics2026() {
                       const isCurrentMonth = day.getMonth() === monthAnchor.getMonth();
                       const inWeek = isInSelectedWeek(day);
                       const isToday = sameDay(day, new Date());
-
                       const inAnyTopic = topics.some((t) => day >= t.start && day <= t.end);
 
                       const base =
@@ -364,31 +438,6 @@ export default function Topics2026() {
               </div>
             </div>
           </Card>
-        </Reveal>
-
-        <Reveal delay={0.05}>
-          <div className="space-y-6">
-            <Card title="Selected Week’s Topic">
-              {weekTopics.length ? (
-                <div className="space-y-4">
-                  {weekTopics.map((t) => (
-                    <div key={t.raw} className="glass rounded-3xl p-4">
-                      <div className="text-xs font-bold tracking-[0.2em] uppercase text-power-blue dark:text-power-cyan">
-                        {formatShort(t.start)} — {formatShort(t.end)}
-                      </div>
-                      <div className="mt-2 text-lg font-black text-power-ink dark:text-white">
-                        {t.title}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-power-ink/70 dark:text-white/70">
-                  No topic found for this week.
-                </div>
-              )}
-            </Card>
-          </div>
         </Reveal>
       </div>
     </div>

@@ -1,10 +1,9 @@
 import React from "react";
-import { PhoneCall, Clock, ShieldCheck, Sparkles } from "lucide-react";
+import { PhoneCall, Clock, ShieldCheck } from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
 import Card from "../components/Card";
 import Button from "../components/ui/Button";
-import Badge from "../components/ui/Badge";
 import { JOIN } from "../shared/join";
 
 function Field({ label, required, children }) {
@@ -115,7 +114,8 @@ export default function Contact() {
                   <div>
                     <div className="font-bold">Schedule (EST)</div>
                     <div>Weekdays: 12:00pm–1:30pm</div>
-                    <div>Weekdays: 9:00pm–10:05pm</div>
+                    <div>Weekdays: 9:00pm–10:00pm</div>
+                    <div>Sundays: 5:00pm–7:00pm</div>
                   </div>
                 </div>
               </div>

@@ -91,7 +91,7 @@ export default function Staff() {
         </Section>
       </Reveal>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      {/* <div className="grid gap-6 md:grid-cols-2">
         {staff.map((s, idx) => (
           <Reveal key={s.name} delay={idx * 0.03}>
             <Card title={s.name} className="relative overflow-hidden">
@@ -121,7 +121,8 @@ export default function Staff() {
             </Card>
           </Reveal>
         ))}
-      </div>
+      </div> */}
+      <div><center>Coming Soon!</center></div>
     </div>
   );
 }
