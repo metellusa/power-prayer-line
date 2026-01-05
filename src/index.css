@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+.dark :root { color-scheme: dark; }
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply font-sans antialiased text-power-ink;
+  background:
+    radial-gradient(1000px circle at 10% 10%, rgba(0,182,230,0.10), transparent 55%),
+    radial-gradient(900px circle at 92% 18%, rgba(67,176,71,0.08), transparent 55%),
+    radial-gradient(900px circle at 35% 115%, rgba(11,78,162,0.08), transparent 60%),
+    #ffffff;
+}
+
+.dark body {
+  @apply text-slate-100;
+  background:
+    radial-gradient(900px circle at 15% 15%, rgba(0,182,230,0.14), transparent 55%),
+    radial-gradient(900px circle at 92% 12%, rgba(67,176,71,0.10), transparent 55%),
+    radial-gradient(900px circle at 40% 115%, rgba(11,78,162,0.12), transparent 60%),
+    #050A14;
+}
+
+a { @apply text-power-blue hover:text-power-navy transition-colors; }
+.dark a { @apply text-power-cyan hover:text-white; }
+
+::selection { background: rgba(0, 182, 230, 0.25); }
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10;
+  }
+  .surface {
+    @apply rounded-4xl border border-slate-200/60 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur shadow-glow;
+  }
+}
