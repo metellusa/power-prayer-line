@@ -84,7 +84,12 @@ export default function SiteShell({ children }) {
             <Link to="/" className="flex items-center gap-3">
               <div className="relative">
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-power-cyan/30 to-power-green/20 blur-md" />
-                <img src={logo} alt="POWER Prayer Line logo" className="relative h-10 w-10 shrink-0 object-contain" draggable={false}/>
+                <img
+                  src={logo}
+                  alt="POWER Prayer Line logo"
+                  className="relative h-12 sm:h-14 w-auto shrink-0 object-contain"
+                  draggable={false}
+                />
               </div>
               <div className="leading-tight">
                 <div className="text-lg font-black tracking-tight text-power-ink dark:text-white">
