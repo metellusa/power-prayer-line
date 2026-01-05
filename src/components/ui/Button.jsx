@@ -5,7 +5,7 @@ const base =
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-power-blue via-power-cyan to-power-green text-white shadow-soft hover:brightness-95 active:brightness-90",
+    "bg-gradient-to-r from-power-blue via-power-cyan to-power-green text-white dark:text-white shadow-soft hover:brightness-95 active:brightness-90",
   secondary:
     "glass text-power-ink dark:text-white hover:bg-white/80 dark:hover:bg-white/10",
   green:

@@ -7,23 +7,25 @@ import FeatureCard from "../components/FeatureCard";
 import Button from "../components/ui/Button";
 import Badge from "../components/ui/Badge";
 import { JOIN } from "../shared/join";
+import BibleGatewayVOTD from "../components/BibleGatewayVOTD";
 
-function BibleGatewayVOTD({ version = "NIV" }) {
-  const src = `https://www.biblegateway.com/votd/get/?format=html&version=${encodeURIComponent(
-    version
-  )}`;
 
-  return (
-    <iframe
-      title={`BibleGateway Verse of the Day (${version})`}
-      src={src}
-      loading="lazy"
-      className="w-full rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/60 dark:bg-white/5"
-      style={{ height: 150 }}
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  );
-}
+// function BibleGatewayVOTD({ version = "NIV" }) {
+//   const src = `https://www.biblegateway.com/votd/get/?format=html&version=${encodeURIComponent(
+//     version
+//   )}`;
+
+//   return (
+//     <iframe
+//       title={`BibleGateway Verse of the Day (${version})`}
+//       src={src}
+//       loading="lazy"
+//       className="w-full rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/60 dark:bg-white/5"
+//       style={{ height: 200 }}
+//       referrerPolicy="no-referrer-when-downgrade"
+//     />
+//   );
+// }
 
 
 export default function Home() {
