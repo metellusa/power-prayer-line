@@ -9,9 +9,10 @@ import logo from "../assets/power-logo.png";
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/our-creed", label: "Our Creed" },
-  { to: "/topics-2026", label: "2026 Topics" },
-  { to: "/our-staff", label: "Our Staff" },
+  { to: "/topics-2026", label: "Topics" },
+  { to: "/volunteer", label: "Volunteer" },
+  { to: "/our-staff", label: "Staff" },
+  { to: "/our-creed", label: "Creed" },
   { to: "/contact", label: "Contact" },
 ];
 

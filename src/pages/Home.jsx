@@ -10,24 +10,6 @@ import { JOIN } from "../shared/join";
 import BibleGatewayVOTD from "../components/BibleGatewayVOTD";
 
 
-// function BibleGatewayVOTD({ version = "NIV" }) {
-//   const src = `https://www.biblegateway.com/votd/get/?format=html&version=${encodeURIComponent(
-//     version
-//   )}`;
-
-//   return (
-//     <iframe
-//       title={`BibleGateway Verse of the Day (${version})`}
-//       src={src}
-//       loading="lazy"
-//       className="w-full rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/60 dark:bg-white/5"
-//       style={{ height: 200 }}
-//       referrerPolicy="no-referrer-when-downgrade"
-//     />
-//   );
-// }
-
-
 export default function Home() {
   return (
     <div className="space-y-10">
@@ -61,8 +43,8 @@ export default function Home() {
               <Button as="a" href="/topics-2026" variant="primary" className="w-full sm:w-auto">
                 View 2026 Topics <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button as="a" href="/contact" variant="secondary" className="w-full sm:w-auto">
-                Make a Prayer Request
+              <Button as="a" href="/volunteer" variant="secondary" className="w-full sm:w-auto">
+                Volunteer to lead or preach on the line
               </Button>
             </div>
 
@@ -125,8 +107,11 @@ export default function Home() {
               Our members share this goal, and it is what keeps us going. We seek to glorify God by ardently studying His Word, striving daily to follow in the footsteps of Jesus Christ, and sharing His message within the communities we serve.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <Button as="a" href="/our-creed" variant="primary" className="w-full sm:w-auto">
-                Our Creed <ArrowRight className="h-4 w-4" />
+              <Button as="a" href="/volunteer" variant="primary" className="w-full sm:w-auto">
+                Volunteer <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button as="a" href="/" variant="secondary" className="w-full sm:w-auto">
+                Get our flyer
               </Button>
             </div>
           </Card>

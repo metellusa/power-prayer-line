@@ -5,7 +5,6 @@ import Section from "../components/Section";
 import Card from "../components/Card";
 import Button from "../components/ui/Button";
 
-// Source list (keep editing here)
 const topicsRaw = [
   // JANUARY — Foundations & Renewal
   "Jan 4 to Jan 10 - A New Beginning in God (Isaiah 43:18–19)",
