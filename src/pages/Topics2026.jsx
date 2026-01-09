@@ -297,9 +297,9 @@ export default function Topics2026() {
   }
 
   function isSelectedWeekRow(day, selectedWeekStart) {
-  // rows are weeks starting Sunday in your grid
-  return startOfWeekSunday(day).getTime() === selectedWeekStart.getTime();
-}
+    // rows are weeks starting Sunday in your grid
+    return startOfWeekSunday(day).getTime() === selectedWeekStart.getTime();
+  }
 
   const dow = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -434,53 +434,32 @@ export default function Topics2026() {
 
                             {/* Content area */}
                             <div className="mt-2 flex-1">
-                              {/* Desktop/tablet: show topic only inside selected week (Mon–Fri) */}
-                              <div className="hidden sm:block">
-                                {inWeek && isWeekdayMonFri(day) ? (() => {
-                                  const weekStart = startOfWeekSunday(day);
-                                  const weekEnd = addDays(weekStart, 6);
-                                  const weekTopic = getTopicForWeek(topics, weekStart, weekEnd);
-                                  if (!weekTopic) return null;
+                              {/* Desktop/tablet only: show topic text in selected week cells (Mon–Fri) */}
+                              {inWeek && isWeekdayMonFri(day) ? (
+                                <div className="hidden sm:block text-left">
+                                  {(() => {
+                                    const weekStart = startOfWeekSunday(day);
+                                    const weekEnd = addDays(weekStart, 6);
+                                    const weekTopic = getTopicForWeek(topics, weekStart, weekEnd);
+                                    if (!weekTopic) return null;
 
-                                  const { main, ref } = splitTitleAndVerse(weekTopic.title);
+                                    const { main, ref } = splitTitleAndVerse(weekTopic.title);
 
-                                  return (
-                                    <div className="text-left">
-                                      <div className="text-[11px] font-black leading-snug text-power-ink dark:text-white">
-                                        {main}
-                                      </div>
-                                      {ref ? (
-                                        <div className="mt-1 text-[10px] font-semibold text-power-ink/65 dark:text-white/65 leading-snug">
-                                          {ref}
+                                    return (
+                                      <>
+                                        <div className="text-[11px] font-black leading-snug text-power-ink dark:text-white">
+                                          {main}
                                         </div>
-                                      ) : null}
-                                    </div>
-                                  );
-                                })() : null}
-                              </div>
-
-                              {/* Mobile: show topic ONLY on the selected week ROW (Mon–Fri cells) */}
-                              <div className="block sm:hidden">
-                                {isSelectedWeekRow(day, selectedWeekStart) && isWeekdayMonFri(day) ? (() => {
-                                  const weekTopic = selectedTopic; // already computed for selectedWeekStart/end
-                                  if (!weekTopic) return null;
-
-                                  const { main, ref } = splitTitleAndVerse(weekTopic.title);
-
-                                  return (
-                                    <div className="text-left">
-                                      <div className="text-[9px] font-black leading-[1.05] text-power-ink dark:text-white line-clamp-2">
-                                        {main}
-                                      </div>
-                                      {ref ? (
-                                        <div className="mt-1 text-[9px] font-semibold text-power-ink/65 dark:text-white/65 leading-[1.05] line-clamp-1">
-                                          {ref}
-                                        </div>
-                                      ) : null}
-                                    </div>
-                                  );
-                                })() : null}
-                              </div>
+                                        {ref ? (
+                                          <div className="mt-1 text-[10px] font-semibold text-power-ink/65 dark:text-white/65 leading-snug">
+                                            {ref}
+                                          </div>
+                                        ) : null}
+                                      </>
+                                    );
+                                  })()}
+                                </div>
+                              ) : null}
                             </div>
                           </div>
 
