@@ -110,7 +110,7 @@ export default function Home() {
               <Button as="a" href="/volunteer" variant="primary" className="w-full sm:w-auto">
                 Volunteer <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button as="a" href="/" variant="secondary" className="w-full sm:w-auto">
+              <Button as="a" href="/flyer" variant="secondary" className="w-full sm:w-auto">
                 Get our flyer
               </Button>
             </div>
@@ -139,12 +139,12 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button as="a" href="/contact" variant="primary" className="w-full sm:w-auto">
-                Prayer Request <ArrowRight className="h-4 w-4" />
+              <Button as="a" href="/flyer" variant="primary" className="w-full sm:w-auto">
+                Get our flyer <ArrowRight className="h-4 w-4" />
               </Button>
               <Button as="a" href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=UD5Z7E5WALD3C&ssrt=1767408433617"
                 target="_blank" rel="noreferrer" variant="secondary" className="w-full sm:w-auto">
-                Support the Ministry
+                Donate to the Ministry
               </Button>
             </div>
           </div>

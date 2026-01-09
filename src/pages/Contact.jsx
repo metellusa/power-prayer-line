@@ -26,9 +26,9 @@ export default function Contact() {
       <Reveal>
         <Section eyebrow="POWER" title="Contact Us">
           <p className="text-lg">
-            We are opened to your comments and/or suggestions. If you would like
-            to lead the prayer line on a specific day, let us know
-            below. Someone will be in touch as soon as possible.
+            We are opened to your comments and/or suggestions. Let us know how we can improve below. If 
+            you would like to lead the prayer line or preach for us, <a href="/volunteer">click here</a> to use our
+            Volunteer form.
           </p>
         </Section>
       </Reveal>
@@ -118,6 +118,11 @@ export default function Contact() {
                     <div>Sundays: 5:00pm–7:00pm</div>
                   </div>
                 </div>
+              </div>
+              <div className="flex items-start gap-3 pt-2">
+                <Button as="a" href="/flyer" variant="primary" className="w-full sm:w-auto">
+                  Get our flyer
+                </Button>
               </div>
             </Card>
           </div>

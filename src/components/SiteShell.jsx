@@ -73,7 +73,7 @@ export default function SiteShell({ children }) {
             rel="noreferrer"
             title="Donation link"
           >
-            Support the Ministry
+            Donate to the Ministry
           </a>
         </Container>
       </div>
