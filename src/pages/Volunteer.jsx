@@ -87,9 +87,9 @@ export default function Volunteer() {
     return (
         <div className="space-y-6">
             <Reveal>
-                <Section eyebrow="POWER" title="Volunteer to Lead or Preach">
+                <Section eyebrow="POWER" title="Volunteer to Lead or Speak">
                     <p className="text-lg">
-                        POWER members can volunteer to lead prayer or to preach on a particular day of the week.
+                        POWER members can volunteer to lead the prayer or to deliver a message on a particular day of the week.
                         Fill out the form below and someone will follow up with you.
                     </p>
                 </Section>
@@ -211,7 +211,7 @@ export default function Volunteer() {
                                                 Choose one…
                                             </option>
                                             <option value="Lead">Lead the service</option>
-                                            <option value="Preach">Preach on the line</option>
+                                            <option value="Speak">Deliver a message</option>
                                         </select>
                                         <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-power-ink/50 dark:text-white/50">
                                             ▾

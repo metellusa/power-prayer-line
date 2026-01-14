@@ -36,7 +36,7 @@ export default function Home() {
               <span className="font-semibold text-power-ink dark:text-white">
                 Promoters Of the Word Empowering Reality
               </span>
-              . We are an international group of Christians who seek continuous spiritual growth through love, daily prayer and Bible study.
+              . We are a community of Christians, largely of Haitian heritage, committed to ongoing spiritual growth through love, daily prayer, and the Bible study.
             </p>
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -44,7 +44,7 @@ export default function Home() {
                 View 2026 Topics <ArrowRight className="h-4 w-4" />
               </Button>
               <Button as="a" href="/volunteer" variant="secondary" className="w-full sm:w-auto">
-                Volunteer to lead or preach on the line
+                Volunteer to lead or speak on the line
               </Button>
             </div>
 

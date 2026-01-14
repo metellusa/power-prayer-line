@@ -27,7 +27,7 @@ export default function Contact() {
         <Section eyebrow="POWER" title="Contact Us">
           <p className="text-lg">
             We are opened to your comments and/or suggestions. Let us know how we can improve below. If 
-            you would like to lead the prayer line or preach for us, <a href="/volunteer">click here</a> to use our
+            you would like to lead the prayer line or deliver a message to us, <a href="/volunteer">click here</a> to use our
             Volunteer form.
           </p>
         </Section>

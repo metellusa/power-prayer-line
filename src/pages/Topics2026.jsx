@@ -309,7 +309,7 @@ export default function Topics2026() {
         <Section eyebrow="POWER" title="2026 Topics">
           <p className="text-lg">
             These topics were prayerfully inspired by God and entrusted to our staff for 2026.
-            Tap any date to jump to that week. If you feel led to lead the prayer line or preach,
+            Tap any date to jump to that week. If you would like to lead the prayer line or deliver a message,
             please{" "}
             <a className="underline font-semibold" href="/volunteer">
               click here
