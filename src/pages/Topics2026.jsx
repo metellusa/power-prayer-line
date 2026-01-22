@@ -9,7 +9,7 @@ const topicsRaw = [
   "Jan 4 to Jan 10 - A New Beginning in God (Isaiah 43:18–19)",
   "Jan 11 to Jan 17 - Seeking God First (Matthew 6:33)",
   "Jan 18 to Jan 24 - Faith That Moves Mountains (Matthew 17:20)",
-  "Jan 25 to Jan 31 - Learning to Hear God’s Voice (John 10:27)",
+  "Jan 25 to Jan 31 - Honoring God Through Physical Health (1 Corinthians 6:19–20)",
 
   "Feb 1 to Feb 7 - Trusting God in Uncertain Times (Proverbs 3:5–6)",
   "Feb 8 to Feb 14 - Loving God and Loving Others (Matthew 22:37–39)",
