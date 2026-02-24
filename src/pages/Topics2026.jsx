@@ -16,7 +16,7 @@ const topicsRaw = [
   "Feb 15 to Feb 21 - Rooted and Established in Christ (Colossians 2:6–7)",
   "Feb 22 to Feb 28 - The Power of Forgiveness (Matthew 18:21–22)",
 
-  "Mar 1 to Mar 7 - Returning to God with the Heart (Joel 2:12–13)",
+  "Mar 1 to Mar 7 - The Power of Reconciliation (Matthew 18:15–17)",
   "Mar 8 to Mar 14 - Humility Before God (James 4:6–10)",
   "Mar 15 to Mar 21 - A Clean Heart and Right Spirit (Psalm 51:10)",
   "Mar 22 to Mar 28 - Dying to Self, Living for Christ (Luke 9:23)",
@@ -26,7 +26,7 @@ const topicsRaw = [
   "Apr 12 to Apr 18 - New Life in Christ (2 Corinthians 5:17)",
   "Apr 19 to Apr 25 - Living as Resurrection People (Romans 6:4)",
 
-  "Apr 26 to May 2 - Abiding in Christ Daily (John 15:4–5)",
+  "Apr 26 to May 2 - Idleness and Its Danger (James 4:17)",
   "May 3 to May 9 - A Life of Obedience (John 14:15)",
   "May 10 to May 16 - God’s Calling on Our Lives (Jeremiah 29:11)",
   "May 17 to May 23 - The Power of Persistent Prayer (Luke 18:1)",
@@ -48,10 +48,10 @@ const topicsRaw = [
   "Aug 16 to Aug 22 - Trusting God with Our Future (Psalm 37:5)",
   "Aug 23 to Aug 29 - Living with Eternal Perspective (Colossians 3:1–2)",
 
-  "Aug 30 to Sep 5 - Loving One Another Deeply (John 13:34–35)",
-  "Sep 6 to Sep 12 - Peacemakers in a Divided World (Matthew 5:9)",
-  "Sep 13 to Sep 19 - Healing Broken Relationships (Romans 12:18)",
-  "Sep 20 to Sep 26 - Bearing One Another’s Burdens (Galatians 6:2)",
+  "Aug 30 to Sep 5 - Characteristics of the Godly Man (1 Timothy 6:11)",
+  "Sep 6 to Sep 12 - Characteristics of the Godly Woman (31:25–26)",
+  "Sep 13 to Sep 19 - Date with Purpose (Proverbs 4:23)",
+  "Sep 20 to Sep 26 - One Flesh: God’s Blueprint for Intimacy (Matthew 19:4–6)",
 
   "Sep 27 to Oct 3 - Standing Firm in Faith (Ephesians 6:13)",
   "Oct 4 to Oct 10 - Overcoming Fear with Faith (2 Timothy 1:7)",
@@ -65,7 +65,7 @@ const topicsRaw = [
   "Nov 22 to Nov 28 - Remembering God’s Faithfulness (Lamentations 3:22–23)",
 
   "Nov 29 to Dec 5 - Hope That Does Not Disappoint (Romans 5:5)",
-  "Dec 6 to Dec 12 - Preparing Our Hearts for Christ (Luke 1:38)",
+  "Dec 6 to Dec 12 - Peacemakers in a Divided World (Matthew 5:9)",
   "Dec 13 to Dec 19 - The Gift of God with Us (Matthew 1:23)",
   "Dec 20 to Dec 26 - The Birth of Our Savior (Luke 2:10–11)",
   "Dec 27 to Jan 2 - Finishing the Year with Faith (Psalm 65:11)",
@@ -80,7 +80,7 @@ const monthlyThemes = [
   "Holy Spirit and Community",
   "Character, Endurance, and Spiritual Maturity",
   "Wisdom, Discernment, and Daily Faith",
-  "Relationships and Reconciliation",
+  "Relationships and Sexuality",
   "Spiritual Warfare and Perseverance",
   "Gratitude and Stewardship",
   "Hope, Advent, and Incarnation",
