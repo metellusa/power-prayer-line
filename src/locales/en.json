@@ -1,0 +1,270 @@
+{
+    "nav": {
+        "home": "Home",
+        "topics": "Topics",
+        "volunteer": "Volunteer",
+        "staff": "Staff",
+        "creed": "Creed",
+        "contact": "Contact"
+    },
+    "shell": {
+        "joinZoom": "Join on Zoom",
+        "donate": "Donate to the Ministry",
+        "logoAlt": "POWER Prayer Line logo",
+        "tagline": "Promoters Of the Word Empowering Reality",
+        "prayerRequest": "Prayer Request",
+        "menu": "Menu",
+        "toggleMenu": "Toggle menu",
+        "copyright": "© 2005–2026 PowerPrayerLine.org. All rights reserved."
+    },
+    "home": {
+        "badges": {
+            "weekdaysAndSundays": "Weekdays and Sundays",
+            "prayerAndBibleStudy": "Prayer and Bible Study",
+            "internationalFamily": "International family"
+        },
+        "hero": {
+            "title": "Plug into the POWER of Prayer",
+            "introBefore": "POWER stands for",
+            "powerMeaning": "Promoters Of the Word Empowering Reality",
+            "introAfter": "We are a community of Christians, largely of Haitian heritage, committed to ongoing spiritual growth through love, daily prayer, and the Bible study.",
+            "viewTopics": "View 2026 Topics",
+            "volunteer": "Volunteer to lead or speak on the line",
+            "reunionRegistration": "POWER Reunion 2026 Registration"
+        },
+        "sessions": {
+            "noon": {
+                "title": "Noon Session",
+                "time": "12:00pm–1:30pm",
+                "meta": "EST • Weekdays"
+            },
+            "night": {
+                "title": "Night Session",
+                "time": "9:00pm–10:00pm",
+                "meta": "EST • Weekdays"
+            },
+            "sunday": {
+                "title": "Sunday Session",
+                "time": "5:00pm–7:00pm",
+                "meta": "EST • Weekends"
+            }
+        },
+        "vision": {
+            "eyebrow": "Power's Vision",
+            "intro": "We see a family of believers who are:",
+            "growing": {
+                "title": "GROWING",
+                "body": "In Christ through love, daily prayer, and Bible study."
+            },
+            "promoting": {
+                "title": "PROMOTING",
+                "body": "The word of God that has the ability to transform lives."
+            },
+            "supporting": {
+                "title": "SUPPORTING",
+                "body": "One another spiritually, emotionally, and even financially."
+            }
+        },
+        "verse": {
+            "title": "Verse of the Day"
+        },
+        "involved": {
+            "title": "Get Involved",
+            "lead": "If you are genuinely seeking spiritual growth, then you are in great company!",
+            "body": "Our members share this goal, and it is what keeps us going. We seek to glorify God by ardently studying His Word, striving daily to follow in the footsteps of Jesus Christ, and sharing His message within the communities we serve.",
+            "volunteer": "Volunteer",
+            "flyer": "Get our flyer"
+        },
+        "cta": {
+            "title": "Join us this week.",
+            "weekdays": "Weekdays: noon to 1:30pm and 9:00pm to 10:00pm (EST).",
+            "sundays": "Sundays: 5:00pm to 7:00pm (EST)",
+            "joinZoom": "Join on Zoom",
+            "getFlyer": "Get our flyer",
+            "donate": "Donate to the Ministry"
+        }
+    },
+    "thankYou": {
+        "title": "Thank You!",
+        "intro": "Your message has been received. We truly appreciate you taking the time to reach out and connect with the POWER Prayer Line family.",
+        "heading": "We’re grateful for you",
+        "body": "Whether this was a prayer request, a question, or a willingness to serve, please know that your submission matters to us. Someone from the ministry will follow up as soon as possible.",
+        "badge": "You are part of the POWER family",
+        "backHome": "Back to Home"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "introBefore": "We are opened to your comments and/or suggestions. Let us know how we can improve below. If you would like to lead the prayer line or deliver a message to us,",
+        "volunteerLink": "click here",
+        "introAfter": "to use our Volunteer form.",
+        "formTitle": "Send a message / prayer request",
+        "fields": {
+            "firstName": "First name",
+            "lastName": "Last name",
+            "email": "Email",
+            "phone": "Phone",
+            "subject": "Subject",
+            "message": "Message"
+        },
+        "placeholders": {
+            "firstName": "Your first name",
+            "lastName": "Your last name",
+            "email": "you@example.com",
+            "phone": "(optional)",
+            "subject": "How can we help?",
+            "message": "Write your message or prayer request..."
+        },
+        "send": "Send",
+        "spamProtected": "Spam-protected",
+        "joinTitle": "Join the Prayer Line",
+        "join": {
+            "number": "Number",
+            "meetingRoom": "Meeting room",
+            "code": "Code",
+            "schedule": "Schedule (EST)",
+            "weekdaysNoon": "Weekdays: 12:00pm–1:30pm",
+            "weekdaysNight": "Weekdays: 9:00pm–10:00pm",
+            "sundays": "Sundays: 5:00pm–7:00pm"
+        },
+        "getFlyer": "Get our flyer"
+    },
+    "flyer": {
+        "title": "Share the Prayer Line",
+        "description": "Help us spread the word. You can view and download the POWER Prayer Line flyer below and share it with family, friends, or your church community.",
+        "alt": "POWER Prayer Line Flyer",
+        "download": "Download Flyer",
+        "open": "Open Full Size",
+        "tip": "Tip: On mobile, long-press the image to save it directly to your phone and share it via text or social media.",
+        "link": "../src/assets/POWER_Prayer_Line_Flyer.jpg"
+    },
+    "volunteer": {
+        "title": "Volunteer to Lead or Speak",
+        "intro": "POWER members can volunteer to lead the prayer or to deliver a message on a particular day of the week. Fill out the form below and someone will follow up with you.",
+        "formTitle": "Volunteer form",
+        "fields": {
+            "firstName": "First name",
+            "lastName": "Last name",
+            "phone": "Phone number",
+            "email": "Email",
+            "date": "Date to volunteer (Mon–Fri)",
+            "iWantTo": "I want to"
+        },
+        "placeholders": {
+            "firstName": "First name",
+            "lastName": "Last name",
+            "phone": "(###) ###-####",
+            "email": "Email",
+            "chooseOne": "Choose one…"
+        },
+        "date": {
+            "availableBefore": "Available dates:",
+            "availableThrough": "through",
+            "availableAfter": "(weekdays only).",
+            "weekdayError": "Please pick a weekday (Mon–Fri)."
+        },
+        "options": {
+            "lead": "Lead the service",
+            "speak": "Deliver a message"
+        },
+        "nextSteps": "We’ll confirm the schedule and share next steps.",
+        "submit": "Submit",
+        "spamProtected": "Spam-protected",
+        "joinTitle": "Join the Prayer Line",
+        "join": {
+            "number": "Number",
+            "meetingRoom": "Meeting room",
+            "code": "Code",
+            "schedule": "Schedule (EST)",
+            "weekdaysNoon": "Weekdays: 12:00pm–1:30pm",
+            "weekdaysNight": "Weekdays: 9:00pm–10:00pm",
+            "sundays": "Sundays: 5:00pm–7:00pm"
+        }
+    },
+    "topics2026": {
+        "title": "2026 Topics",
+        "introBefore": "These topics were prayerfully inspired by God and entrusted to our staff for 2026. Tap any date to jump to that week. If you would like to lead the prayer line or deliver a message, please",
+        "volunteerLink": "click here",
+        "introAfter": "to complete our Volunteer form.",
+        "prev": "Prev",
+        "next": "Next",
+        "today": "Today",
+        "jumpToCurrentWeek": "Jump to current week",
+        "topicFor": "Topic for",
+        "noTopic": "No topic found for this week.",
+        "selectedWeek": "selected week",
+        "note": "Note: these topics may change at the staff's discretion."
+    },
+    "creed": {
+        "title": "Our Creed",
+        "introBefore": "We are a non-denominational ministry, united around the following key tenets of the Christian faith. Help us spread the word by sharing",
+        "flyerLink": "our flyer",
+        "introAfter": "on social media, or with family and friends.",
+        "tapToExpand": "Tap to expand"
+    },
+    "reunion": {
+        "title": "2026 POWER Reunion",
+        "intro": "Complete the registration form below and submit your payment to reserve your spot.",
+        "formTitle": "Registration Form",
+        "fields": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "street1": "Street Address",
+            "street2": "Street Address Line 2",
+            "city": "City",
+            "state": "State / Province",
+            "postal": "Postal / Zip Code",
+            "country": "Country",
+            "maritalStatus": "Marital Status",
+            "phone": "Phone Number",
+            "email": "Email"
+        },
+        "placeholders": {
+            "firstName": "First name",
+            "lastName": "Last name",
+            "street1": "Street address",
+            "street2": "Apartment, suite, unit, etc.",
+            "city": "City",
+            "state": "State / Province",
+            "postal": "Zip code",
+            "selectCountry": "Please Select",
+            "phone": "(000) 000-0000",
+            "email": "ex: myname@example.com"
+        },
+        "marital": {
+            "married": "Married",
+            "engaged": "Engaged",
+            "single": "Single"
+        },
+        "registrationFee": "Registration Fee",
+        "perPerson": "per person",
+        "price": "Price",
+        "quantity": "Quantity",
+        "summary": {
+            "subtotal": "Subtotal",
+            "tax": "Tax",
+            "total": "Total"
+        },
+        "paypal": {
+            "line1": "We use PayPal as our payment gateway. However, you do not need a PayPal account to pay the registration fee.",
+            "line2": "If you don’t have a PayPal account, choose Pay with Debit or Credit Card during checkout.",
+            "imageAlt": "Pay with debit or credit card option"
+        },
+        "submit": "Submit Registration & Pay",
+        "secure": "Secure registration form",
+        "notes": {
+            "title": "Registration Notes",
+            "whoFor": {
+                "title": "Who this is for",
+                "body": "Complete one registration per attendee, or increase the quantity if you are paying for multiple people."
+            },
+            "confirmation": {
+                "title": "Confirmation",
+                "body": "Be sure to use an email address you actively check so you can receive updates and payment confirmation."
+            },
+            "phone": {
+                "title": "Phone number",
+                "body": "Adding your phone number is optional, but helpful in case the team needs to contact you quickly."
+            }
+        }
+    }
+}

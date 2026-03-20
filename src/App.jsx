@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Volunteer from "./pages/Volunteer";
 import ThankYou from "./pages/ThankYou";
 import Flyer from "./pages/Flyer";
+import ReunionRegistration from "./pages/ReunionRegistration";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/flyer" element={<Flyer />} />
+        <Route path="/reunion-registration" element={<ReunionRegistration />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </SiteShell>

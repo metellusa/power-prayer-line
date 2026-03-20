@@ -1,21 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Download, Share2 } from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
 import Card from "../components/Card";
 import Button from "../components/ui/Button";
 
-import flyer from "../assets/POWER_Prayer_Line_Flyer.jpg";
-
 export default function Flyer() {
+  const { t } = useTranslation();
+  const flyer = t("flyer.link");
+
   return (
     <div className="space-y-8">
       <Reveal>
-        <Section eyebrow="POWER" title="Share the Prayer Line">
+        <Section eyebrow="POWER" title={t("flyer.title")}>
           <p className="text-lg text-power-ink/75 dark:text-white/75 max-w-2xl">
-            Help us spread the word. You can view and download the POWER Prayer
-            Line flyer below and share it with family, friends, or your church
-            community.
+            {t("flyer.description")}
           </p>
         </Section>
       </Reveal>
@@ -27,7 +27,7 @@ export default function Flyer() {
             <div className="w-full max-w-3xl rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/10 shadow-soft">
               <img
                 src={flyer}
-                alt="POWER Prayer Line Flyer"
+                alt={t("flyer.alt")}
                 className="w-full h-auto object-contain bg-white"
                 draggable={false}
               />
@@ -38,11 +38,11 @@ export default function Flyer() {
               <Button
                 as="a"
                 href={flyer}
-                download="POWER_Prayer_Line_Flyer.jpg"
+                download={flyer}
                 variant="primary"
               >
                 <Download className="h-4 w-4" />
-                Download Flyer
+                {t("flyer.download")}
               </Button>
 
               <Button
@@ -53,13 +53,12 @@ export default function Flyer() {
                 variant="secondary"
               >
                 <Share2 className="h-4 w-4" />
-                Open Full Size
+                {t("flyer.open")}
               </Button>
             </div>
 
             <p className="text-sm text-power-ink/60 dark:text-white/60 text-center max-w-xl">
-              Tip: On mobile, long-press the image to save it directly to your
-              phone and share it via text or social media.
+              {t("flyer.tip")}
             </p>
           </div>
         </Card>

@@ -1,20 +1,13 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { HeartHandshake, PhoneCall } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Container from "./ui/Container";
 import Button from "./ui/Button";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 import { JOIN } from "../shared/join";
 import logo from "../assets/power-logo.png";
-
-const navItems = [
-  { to: "/", label: "Home" },
-  { to: "/topics-2026", label: "Topics" },
-  { to: "/volunteer", label: "Volunteer" },
-  { to: "/our-staff", label: "Staff" },
-  { to: "/our-creed", label: "Creed" },
-  { to: "/contact", label: "Contact" },
-];
 
 function NavItem({ to, label, onClick }) {
   return (
@@ -37,9 +30,18 @@ function NavItem({ to, label, onClick }) {
 }
 
 export default function SiteShell({ children }) {
+  const { t } = useTranslation();
   const [open, setOpen] = React.useState(false);
 
-  // ✅ Close mobile menu if you resize to desktop (prevents “stuck open” state)
+  const navItems = [
+    { to: "/", label: t("nav.home") },
+    { to: "/topics-2026", label: t("nav.topics") },
+    { to: "/volunteer", label: t("nav.volunteer") },
+    { to: "/our-staff", label: t("nav.staff") },
+    { to: "/our-creed", label: t("nav.creed") },
+    { to: "/contact", label: t("nav.contact") },
+  ];
+
   React.useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 768) setOpen(false);
@@ -59,10 +61,10 @@ export default function SiteShell({ children }) {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 text-white/90 underline decoration-white/30 hover:decoration-white hover:text-white transition"
-              title="Join on Zoom"
+              title={t("shell.joinZoom")}
             >
               <PhoneCall className="h-4 w-4" />
-              Join on Zoom
+              {t("shell.joinZoom")}
             </a>
           </div>
 
@@ -71,9 +73,9 @@ export default function SiteShell({ children }) {
             href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=UD5Z7E5WALD3C&ssrt=1767408433617"
             target="_blank"
             rel="noreferrer"
-            title="Donation link"
+            title={t("shell.donate")}
           >
-            Donate to the Ministry
+            {t("shell.donate")}
           </a>
         </Container>
       </div>
@@ -87,7 +89,7 @@ export default function SiteShell({ children }) {
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-power-cyan/30 to-power-green/20 blur-md" />
                 <img
                   src={logo}
-                  alt="POWER Prayer Line logo"
+                  alt={t("shell.logoAlt")}
                   className="relative h-12 sm:h-14 w-auto shrink-0 object-contain"
                   draggable={false}
                 />
@@ -97,7 +99,7 @@ export default function SiteShell({ children }) {
                   POWER Prayer Line
                 </div>
                 <div className="text-xs text-power-ink/55 dark:text-white/60">
-                  Promoters Of the Word Empowering Reality
+                  {t("shell.tagline")}
                 </div>
               </div>
             </Link>
@@ -108,23 +110,25 @@ export default function SiteShell({ children }) {
                   <NavItem key={it.to} {...it} />
                 ))}
               </nav>
+              <LanguageToggle />
               <ThemeToggle />
               <Button as={Link} to="/contact" variant="primary" className="px-4 py-2.5">
                 <HeartHandshake className="h-4 w-4" />
-                Prayer Request
+                {t("shell.prayerRequest")}
               </Button>
             </div>
 
             <div className="md:hidden flex items-center gap-2">
+              <LanguageToggle />
               <ThemeToggle />
               <button
                 className="glass inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold text-power-ink dark:text-white hover:bg-white/80 dark:hover:bg-white/10 transition"
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
-                aria-label="Toggle menu"
+                aria-label={t("shell.toggleMenu")}
                 type="button"
               >
-                Menu
+                {t("shell.menu")}
               </button>
             </div>
           </Container>
@@ -140,7 +144,6 @@ export default function SiteShell({ children }) {
                 ))}
               </div>
 
-              {/* ✅ Add Zoom join CTA on mobile, since ribbon can wrap/feel hidden */}
               <Button
                 as="a"
                 href={JOIN.zoomUrl}
@@ -150,12 +153,12 @@ export default function SiteShell({ children }) {
                 onClick={() => setOpen(false)}
               >
                 <PhoneCall className="h-4 w-4" />
-                Join on Zoom
+                {t("shell.joinZoom")}
               </Button>
 
               <Button as={Link} to="/contact" variant="primary" onClick={() => setOpen(false)}>
                 <HeartHandshake className="h-4 w-4" />
-                Prayer Request
+                {t("shell.prayerRequest")}
               </Button>
             </Container>
           </div>
@@ -187,15 +190,14 @@ export default function SiteShell({ children }) {
           </div>
 
           <div className="text-sm text-power-ink/70 dark:text-white/70">
-            Promoters Of the Word Empowering Reality
+            {t("shell.tagline")}
           </div>
 
           <div className="mt-4 text-xs text-power-ink/50 dark:text-white/50">
-            © 2005–2026 PowerPrayerLine.org. All rights reserved.
+            {t("shell.copyright")}
           </div>
         </Container>
       </footer>
-
     </div>
   );
 }

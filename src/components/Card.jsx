@@ -1,5 +1,6 @@
 import React from "react";
 import Surface from "./ui/Surface";
+import { useTranslation } from "react-i18next";
 
 export default function Card({ title, children, className = "" }) {
   return (

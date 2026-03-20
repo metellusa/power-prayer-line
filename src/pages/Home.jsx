@@ -1,5 +1,14 @@
 import React from "react";
-import { ArrowRight, PhoneCall, BookOpen, HandHeart, Users, Sparkles, Globe2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import {
+  ArrowRight,
+  PhoneCall,
+  BookOpen,
+  HandHeart,
+  Users,
+  Sparkles,
+  Globe2,
+} from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
 import Card from "../components/Card";
@@ -9,8 +18,27 @@ import Badge from "../components/ui/Badge";
 import { JOIN } from "../shared/join";
 import BibleGatewayVOTD from "../components/BibleGatewayVOTD";
 
-
 export default function Home() {
+  const { t, i18n } = useTranslation();
+
+  const sessions = [
+    {
+      k: t("home.sessions.noon.title"),
+      v: t("home.sessions.noon.time"),
+      s: t("home.sessions.noon.meta"),
+    },
+    {
+      k: t("home.sessions.night.title"),
+      v: t("home.sessions.night.time"),
+      s: t("home.sessions.night.meta"),
+    },
+    {
+      k: t("home.sessions.sunday.title"),
+      v: t("home.sessions.sunday.time"),
+      s: t("home.sessions.sunday.meta"),
+    },
+  ];
+
   return (
     <div className="space-y-10">
       {/* Hero */}
@@ -22,44 +50,57 @@ export default function Home() {
 
           <div className="relative p-8 md:p-12">
             <div className="flex flex-wrap items-center gap-2">
-              <Badge color="cyan"><span className="inline-flex items-center gap-2"><Sparkles className="h-4 w-4" /> Weekdays and Sundays</span></Badge>
-              <Badge color="green">Prayer and Bible Study</Badge>
-              <Badge color="slate"><span className="inline-flex items-center gap-2"><Globe2 className="h-4 w-4" /> International family</span></Badge>
+              <Badge color="cyan">
+                <span className="inline-flex items-center gap-2">
+                  <Sparkles className="h-4 w-4" />
+                  {t("home.badges.weekdaysAndSundays")}
+                </span>
+              </Badge>
+
+              <Badge color="green">{t("home.badges.prayerAndBibleStudy")}</Badge>
+
+              <Badge color="slate">
+                <span className="inline-flex items-center gap-2">
+                  <Globe2 className="h-4 w-4" />
+                  {t("home.badges.internationalFamily")}
+                </span>
+              </Badge>
             </div>
 
             <h1 className="mt-6 text-3xl md:text-6xl font-black tracking-tight">
-              Plug into the POWER of Prayer
+              {t("home.hero.title")}
             </h1>
 
             <p className="mt-5 text-lg md:text-xl text-power-ink/75 dark:text-white/75 max-w-2xl leading-relaxed">
-              POWER stands for{" "}
+              {t("home.hero.introBefore")}{" "}
               <span className="font-semibold text-power-ink dark:text-white">
-                Promoters Of the Word Empowering Reality
+                {t("home.hero.powerMeaning")}
               </span>
-              . We are a community of Christians, largely of Haitian heritage, committed to ongoing spiritual growth through love, daily prayer, and the Bible study.
+              . {t("home.hero.introAfter")}
             </p>
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
-              <Button as="a" href="/topics-2026" variant="primary" className="w-full sm:w-auto">
-                View 2026 Topics <ArrowRight className="h-4 w-4" />
+              <Button as="a" href="/reunion-registration" variant="primary" className="w-full sm:w-auto">
+                {t("home.hero.reunionRegistration")} <ArrowRight className="h-4 w-4" />
               </Button>
+
               <Button as="a" href="/volunteer" variant="secondary" className="w-full sm:w-auto">
-                Volunteer to lead or speak on the line
+                {t("home.hero.volunteer")}
               </Button>
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {[
-                { k: "Noon Session", v: "12:00pm–1:30pm", s: "EST • Weekdays" },
-                { k: "Night Session", v: "9:00pm–10:00pm", s: "EST • Weekdays" },
-                { k: "Sunday Session", v: "5:00pm–7:00pm", s: "EST • Weekends" },
-              ].map((x) => (
+              {sessions.map((x) => (
                 <div key={x.k} className="glass rounded-3xl p-5 shadow-soft">
                   <div className="text-xs font-bold tracking-[0.2em] uppercase text-power-blue dark:text-power-cyan">
                     {x.k}
                   </div>
-                  <div className="mt-2 text-xl font-black text-power-ink dark:text-white">{x.v}</div>
-                  <div className="mt-1 text-sm text-power-ink/70 dark:text-white/70">{x.s}</div>
+                  <div className="mt-2 text-xl font-black text-power-ink dark:text-white">
+                    {x.v}
+                  </div>
+                  <div className="mt-1 text-sm text-power-ink/70 dark:text-white/70">
+                    {x.s}
+                  </div>
                 </div>
               ))}
             </div>
@@ -69,17 +110,20 @@ export default function Home() {
 
       {/* Vision */}
       <Reveal>
-        <Section eyebrow="Power's Vision" title="G.P.S">
-          <p className="text-lg">We see a family of believers who are:</p>
+        <Section eyebrow={t("home.vision.eyebrow")} title="G.P.S">
+          <p className="text-lg">{t("home.vision.intro")}</p>
+
           <div className="mt-6 grid gap-5 md:grid-cols-3">
-            <FeatureCard icon={Users} title="GROWING">
-              In Christ through love, daily prayer, and Bible study.
+            <FeatureCard icon={Users} title={t("home.vision.growing.title")}>
+              {t("home.vision.growing.body")}
             </FeatureCard>
-            <FeatureCard icon={BookOpen} title="PROMOTING">
-              The word of God that has the ability to transform lives.
+
+            <FeatureCard icon={BookOpen} title={t("home.vision.promoting.title")}>
+              {t("home.vision.promoting.body")}
             </FeatureCard>
-            <FeatureCard icon={HandHeart} title="SUPPORTING">
-              One another spiritually, emotionally, and even financially.
+
+            <FeatureCard icon={HandHeart} title={t("home.vision.supporting.title")}>
+              {t("home.vision.supporting.body")}
             </FeatureCard>
           </div>
         </Section>
@@ -88,30 +132,29 @@ export default function Home() {
       {/* Scripture + Get involved */}
       <div className="grid gap-6 md:grid-cols-2">
         <Reveal>
-          <Card title="Verse of the Day" className="relative overflow-hidden">
+          <Card title={t("home.verse.title")} className="relative overflow-hidden">
             <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-power-cyan/20 blur-3xl" />
             <div className="relative">
               <div className="mt-4">
-                <BibleGatewayVOTD version="NIV" />
+                <BibleGatewayVOTD version={i18n.language === "fr" ? "LSG" : "NIV"} />
               </div>
             </div>
           </Card>
         </Reveal>
 
         <Reveal delay={0.05}>
-          <Card title="Get Involved">
-            <p className="text-lg">
-              If you are genuinely seeking spiritual growth, then you are in great company!
-            </p>
-            <p className="mt-3">
-              Our members share this goal, and it is what keeps us going. We seek to glorify God by ardently studying His Word, striving daily to follow in the footsteps of Jesus Christ, and sharing His message within the communities we serve.
-            </p>
+          <Card title={t("home.involved.title")}>
+            <p className="text-lg">{t("home.involved.lead")}</p>
+
+            <p className="mt-3">{t("home.involved.body")}</p>
+
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <Button as="a" href="/volunteer" variant="primary" className="w-full sm:w-auto">
-                Volunteer <ArrowRight className="h-4 w-4" />
+                {t("home.involved.volunteer")} <ArrowRight className="h-4 w-4" />
               </Button>
+
               <Button as="a" href="/flyer" variant="secondary" className="w-full sm:w-auto">
-                Get our flyer
+                {t("home.involved.flyer")}
               </Button>
             </div>
           </Card>
@@ -123,28 +166,41 @@ export default function Home() {
         <div className="rounded-4xl overflow-hidden border border-slate-200/60 dark:border-white/10 bg-gradient-to-r from-power-navy via-power-blue to-power-navy shadow-glow">
           <div className="p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="text-white">
-              <div className="text-2xl md:text-3xl font-black">Join us this week.</div>
+              <div className="text-2xl md:text-3xl font-black">
+                {t("home.cta.title")}
+              </div>
+
               <div className="mt-2 text-white/80 max-w-2xl">
-                Weekdays: noon to 1:30pm and 9:00pm to 10:00pm (EST).
-                <div>Sundays: 5:00pm to 7:00pm (EST)</div>
+                {t("home.cta.weekdays")}
+                <div>{t("home.cta.sundays")}</div>
+
                 <a
                   href={JOIN.zoomUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 text-white/90 underline decoration-white/30 hover:decoration-white hover:text-white transition"
-                  title="Join on Zoom"
-                ><PhoneCall className="h-4 w-4" />
-                  Join on Zoom
+                  title={t("home.cta.joinZoom")}
+                >
+                  <PhoneCall className="h-4 w-4" />
+                  {t("home.cta.joinZoom")}
                 </a>
               </div>
             </div>
+
             <div className="flex flex-col sm:flex-row gap-3">
               <Button as="a" href="/flyer" variant="primary" className="w-full sm:w-auto">
-                Get our flyer <ArrowRight className="h-4 w-4" />
+                {t("home.cta.getFlyer")} <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button as="a" href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=UD5Z7E5WALD3C&ssrt=1767408433617"
-                target="_blank" rel="noreferrer" variant="secondary" className="w-full sm:w-auto">
-                Donate to the Ministry
+
+              <Button
+                as="a"
+                href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=UD5Z7E5WALD3C&ssrt=1767408433617"
+                target="_blank"
+                rel="noreferrer"
+                variant="secondary"
+                className="w-full sm:w-auto"
+              >
+                {t("home.cta.donate")}
               </Button>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { PhoneCall, Clock, ShieldCheck } from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
@@ -21,21 +22,25 @@ const inputCls =
   "w-full rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-power-cyan/35 focus:border-power-cyan/40 text-power-ink dark:text-white placeholder:text-power-ink/45 dark:placeholder:text-white/45";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-6">
       <Reveal>
-        <Section eyebrow="POWER" title="Contact Us">
+        <Section eyebrow="POWER" title={t("contact.title")}>
           <p className="text-lg">
-            We are opened to your comments and/or suggestions. Let us know how we can improve below. If 
-            you would like to lead the prayer line or deliver a message to us, <a href="/volunteer">click here</a> to use our
-            Volunteer form.
+            {t("contact.introBefore")}{" "}
+            <a className="underline font-semibold" href="/volunteer">
+              {t("contact.volunteerLink")}
+            </a>{" "}
+            {t("contact.introAfter")}
           </p>
         </Section>
       </Reveal>
 
       <div className="grid gap-6 md:grid-cols-3">
         <Reveal className="md:col-span-2">
-          <Card title="Send a message / prayer request" className="relative overflow-hidden">
+          <Card title={t("contact.formTitle")} className="relative overflow-hidden">
             <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-power-cyan/15 blur-3xl" />
             <div className="relative">
               <form
@@ -52,40 +57,70 @@ export default function Contact() {
                   </label>
                 </p>
 
-                <Field label="First name" required>
-                  <input name="q3_name[first]" required className={inputCls} placeholder="Your name" />
-                </Field>
-                <Field label="Last name" required>
-                  <input name="q3_name[last]" required className={inputCls} placeholder="Your name" />
-                </Field>
-
-                <Field label="Email" required>
-                  <input name="q4_email" type="email" required className={inputCls} placeholder="you@example.com" />
+                <Field label={t("contact.fields.firstName")} required>
+                  <input
+                    name="q3_name[first]"
+                    required
+                    className={inputCls}
+                    placeholder={t("contact.placeholders.firstName")}
+                  />
                 </Field>
 
-                <Field label="Phone">
-                  <input name="q5_phone[full]" className={inputCls} placeholder="(optional)" />
+                <Field label={t("contact.fields.lastName")} required>
+                  <input
+                    name="q3_name[last]"
+                    required
+                    className={inputCls}
+                    placeholder={t("contact.placeholders.lastName")}
+                  />
+                </Field>
+
+                <Field label={t("contact.fields.email")} required>
+                  <input
+                    name="q4_email"
+                    type="email"
+                    required
+                    className={inputCls}
+                    placeholder={t("contact.placeholders.email")}
+                  />
+                </Field>
+
+                <Field label={t("contact.fields.phone")}>
+                  <input
+                    name="q5_phone[full]"
+                    className={inputCls}
+                    placeholder={t("contact.placeholders.phone")}
+                  />
                 </Field>
 
                 <div className="md:col-span-2">
-                  <Field label="Subject">
-                    <input name="q6_subject" className={inputCls} placeholder="How can we help?" />
+                  <Field label={t("contact.fields.subject")}>
+                    <input
+                      name="q6_subject"
+                      className={inputCls}
+                      placeholder={t("contact.placeholders.subject")}
+                    />
                   </Field>
                 </div>
 
                 <div className="md:col-span-2">
-                  <Field label="Message">
-                    <textarea name="q8_typeA8" rows="7" className={inputCls} placeholder="Write your message or prayer request..." />
+                  <Field label={t("contact.fields.message")}>
+                    <textarea
+                      name="q8_typeA8"
+                      rows="7"
+                      className={inputCls}
+                      placeholder={t("contact.placeholders.message")}
+                    />
                   </Field>
                 </div>
 
                 <div className="md:col-span-2 flex flex-wrap gap-3 items-center">
                   <Button type="submit" variant="primary">
-                    Send
+                    {t("contact.send")}
                   </Button>
                   <div className="text-sm text-power-ink/60 dark:text-white/60 inline-flex items-center gap-2">
                     <ShieldCheck className="h-4 w-4 text-power-blue dark:text-power-cyan" />
-                    Spam-protected
+                    {t("contact.spamProtected")}
                   </div>
                 </div>
               </form>
@@ -95,16 +130,18 @@ export default function Contact() {
 
         <Reveal delay={0.05}>
           <div className="space-y-6">
-            <Card title="Join the Prayer Line">
+            <Card title={t("contact.joinTitle")}>
               <div className="space-y-3 text-power-ink/80 dark:text-white/75">
                 <div className="flex items-start gap-3">
                   <PhoneCall className="h-5 w-5 text-power-blue dark:text-power-cyan mt-0.5" />
                   <div>
-                    <div className="font-bold">Number</div>
+                    <div className="font-bold">{t("contact.join.number")}</div>
                     <div>{JOIN.phone}</div>
-                    <div className="mt-2 font-bold">Meeting room</div>
+
+                    <div className="mt-2 font-bold">{t("contact.join.meetingRoom")}</div>
                     <div>{JOIN.meeting}</div>
-                    <div className="mt-2 font-bold">Code</div>
+
+                    <div className="mt-2 font-bold">{t("contact.join.code")}</div>
                     <div>{JOIN.code}</div>
                   </div>
                 </div>
@@ -112,16 +149,17 @@ export default function Contact() {
                 <div className="flex items-start gap-3 pt-2">
                   <Clock className="h-5 w-5 text-power-blue dark:text-power-cyan mt-0.5" />
                   <div>
-                    <div className="font-bold">Schedule (EST)</div>
-                    <div>Weekdays: 12:00pm–1:30pm</div>
-                    <div>Weekdays: 9:00pm–10:00pm</div>
-                    <div>Sundays: 5:00pm–7:00pm</div>
+                    <div className="font-bold">{t("contact.join.schedule")}</div>
+                    <div>{t("contact.join.weekdaysNoon")}</div>
+                    <div>{t("contact.join.weekdaysNight")}</div>
+                    <div>{t("contact.join.sundays")}</div>
                   </div>
                 </div>
               </div>
+
               <div className="flex items-start gap-3 pt-2">
                 <Button as="a" href="/flyer" variant="primary" className="w-full sm:w-auto">
-                  Get our flyer
+                  {t("contact.getFlyer")}
                 </Button>
               </div>
             </Card>

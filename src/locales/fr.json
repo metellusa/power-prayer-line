@@ -1,0 +1,270 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "topics": "Sujets",
+        "volunteer": "Volontariat",
+        "staff": "Équipe",
+        "creed": "Credo",
+        "contact": "Contact"
+    },
+    "shell": {
+        "joinZoom": "Rejoindre sur Zoom",
+        "donate": "Faire un don au ministère",
+        "logoAlt": "Logo de POWER Prayer Line",
+        "tagline": "Promoteurs de la Parole qui transforme la réalité",
+        "prayerRequest": "Requête de prière",
+        "menu": "Menu",
+        "toggleMenu": "Afficher le menu",
+        "copyright": "© 2005–2026 PowerPrayerLine.org. Tous droits réservés."
+    },
+    "home": {
+        "badges": {
+            "weekdaysAndSundays": "En semaine et le dimanche",
+            "prayerAndBibleStudy": "Prière et étude biblique",
+            "internationalFamily": "Famille internationale"
+        },
+        "hero": {
+            "title": "Entrez dans la puissance de la prière",
+            "introBefore": "POWER signifie",
+            "powerMeaning": "Promoters Of the Word Empowering Reality",
+            "introAfter": "Nous sommes une communauté de chrétiens, majoritairement d’origine haïtienne, qui cherche à grandir spirituellement à travers l’amour, la prière quotidienne et l’étude de la Bible.",
+            "viewTopics": "Voir les sujets 2026",
+            "volunteer": "Diriger ou prêcher sur la ligne",
+            "reunionRegistration": "Inscription à la réunion POWER 2026"
+        },
+        "sessions": {
+            "noon": {
+                "title": "Session de midi",
+                "time": "12h00–13h30",
+                "meta": "HNE • En semaine"
+            },
+            "night": {
+                "title": "Session du soir",
+                "time": "21h00–22h00",
+                "meta": "HNE • En semaine"
+            },
+            "sunday": {
+                "title": "Session du dimanche",
+                "time": "17h00–19h00",
+                "meta": "HNE • Fin de semaine"
+            }
+        },
+        "vision": {
+            "eyebrow": "Vision de POWER",
+            "intro": "Nous visons une famille de croyants qui :",
+            "growing": {
+                "title": "GRANDISSENT",
+                "body": "En Christ par l’amour, la prière quotidienne et l’étude biblique."
+            },
+            "promoting": {
+                "title": "PROCLAMENT",
+                "body": "La parole de Dieu, laquelle a le pouvoir de transformer des vies."
+            },
+            "supporting": {
+                "title": "SE SOUTIENNENT",
+                "body": "Les uns les autres spirituellement, émotionnellement et même financièrement."
+            }
+        },
+        "verse": {
+            "title": "Verset du jour"
+        },
+        "involved": {
+            "title": "Impliquez-vous",
+            "lead": "Si vous recherchez sincèrement une croissance spirituelle, vous êtes en très bonne compagnie !",
+            "body": "Nos membres partagent ce même objectif, et c’est ce qui nous motive. Nous cherchons à glorifier Dieu en étudiant ardemment Sa Parole, en nous efforçant chaque jour de suivre les traces de Jésus-Christ, et en partageant Son message dans les communautés que nous servons.",
+            "volunteer": "Volontariat",
+            "flyer": "Obtenir notre flyer"
+        },
+        "cta": {
+            "title": "Rejoignez-nous cette semaine.",
+            "weekdays": "En semaine : de midi à 13h30 et de 21h00 à 22h00 (HNE).",
+            "sundays": "Dimanches : de 17h00 à 19h00 (HNE)",
+            "joinZoom": "Rejoindre sur Zoom",
+            "getFlyer": "Obtenir notre flyer",
+            "donate": "Faire un don au ministère"
+        }
+    },
+    "thankYou": {
+        "title": "Merci !",
+        "intro": "Votre message a bien été reçu. Nous vous remercions sincèrement d’avoir pris le temps de nous écrire et de vous rapprocher de la famille POWER Prayer Line.",
+        "heading": "Nous vous en sommes reconnaissants",
+        "body": "Qu’il s’agisse d’une requête de prière, d’une question ou d’un désir de servir, sachez que votre soumission compte pour nous. Un membre du ministère vous contactera dès que possible.",
+        "badge": "Vous faites partie de la famille POWER",
+        "backHome": "Retour à l’accueil"
+    },
+    "contact": {
+        "title": "Nous contacter",
+        "introBefore": "Nous sommes ouverts à vos commentaires et suggestions. Dites-nous ci-dessous comment nous pouvons nous améliorer. Si vous souhaitez diriger la ligne de prière ou apporter un message,",
+        "volunteerLink": "cliquez ici",
+        "introAfter": "pour utiliser notre formulaire de bénévolat.",
+        "formTitle": "Envoyer un message / une requête de prière",
+        "fields": {
+            "firstName": "Prénom",
+            "lastName": "Nom de famille",
+            "email": "Courriel",
+            "phone": "Téléphone",
+            "subject": "Sujet",
+            "message": "Message"
+        },
+        "placeholders": {
+            "firstName": "Votre prénom",
+            "lastName": "Votre nom de famille",
+            "email": "vous@exemple.com",
+            "phone": "(facultatif)",
+            "subject": "Comment pouvons-nous vous aider ?",
+            "message": "Écrivez votre message ou votre requête de prière..."
+        },
+        "send": "Envoyer",
+        "spamProtected": "Protégé contre le spam",
+        "joinTitle": "Rejoindre la ligne de prière",
+        "join": {
+            "number": "Numéro",
+            "meetingRoom": "Salle de réunion",
+            "code": "Code",
+            "schedule": "Horaire (HNE)",
+            "weekdaysNoon": "En semaine : 12h00–13h30",
+            "weekdaysNight": "En semaine : 21h00–22h00",
+            "sundays": "Dimanches : 17h00–19h00"
+        },
+        "getFlyer": "Obtenir notre flyer"
+    },
+    "flyer": {
+        "title": "Partagez la ligne de prière",
+        "description": "Aidez-nous à faire connaître la ligne de prière. Vous pouvez consulter et télécharger le flyer POWER Prayer Line ci-dessous et le partager avec votre famille, vos amis ou votre communauté d’église.",
+        "alt": "Flyer POWER Prayer Line",
+        "download": "Télécharger le flyer",
+        "open": "Ouvrir en taille réelle",
+        "tip": "Astuce : Sur mobile, maintenez votre doigt appuyé sur l’image pour l’enregistrer directement sur votre téléphone et la partager par message ou sur les réseaux sociaux.",
+        "link": "../src/assets/POWER_French_Flyer.jpg"
+    },
+    "volunteer": {
+        "title": "Diriger ou prêcher sur la ligne",
+        "intro": "Les membres de POWER peuvent se porter volontaires pour diriger la prière ou apporter un message un jour précis de la semaine. Remplissez le formulaire ci-dessous et quelqu’un vous contactera.",
+        "formTitle": "Formulaire de bénévolat",
+        "fields": {
+            "firstName": "Prénom",
+            "lastName": "Nom de famille",
+            "phone": "Numéro de téléphone",
+            "email": "Courriel",
+            "date": "Date de bénévolat (lun–ven)",
+            "iWantTo": "Je souhaite"
+        },
+        "placeholders": {
+            "firstName": "Prénom",
+            "lastName": "Nom de famille",
+            "phone": "(###) ###-####",
+            "email": "Courriel",
+            "chooseOne": "Choisissez une option…"
+        },
+        "date": {
+            "availableBefore": "Dates disponibles :",
+            "availableThrough": "jusqu’au",
+            "availableAfter": "(jours de semaine seulement).",
+            "weekdayError": "Veuillez choisir un jour de semaine (lun–ven)."
+        },
+        "options": {
+            "lead": "Diriger le service",
+            "speak": "Apporter un message"
+        },
+        "nextSteps": "Nous confirmerons l’horaire et vous communiquerons les prochaines étapes.",
+        "submit": "Soumettre",
+        "spamProtected": "Protégé contre le spam",
+        "joinTitle": "Rejoindre la ligne de prière",
+        "join": {
+            "number": "Numéro",
+            "meetingRoom": "Salle de réunion",
+            "code": "Code",
+            "schedule": "Horaire (HNE)",
+            "weekdaysNoon": "En semaine : 12h00–13h30",
+            "weekdaysNight": "En semaine : 21h00–22h00",
+            "sundays": "Dimanches : 17h00–19h00"
+        }
+    },
+    "topics2026": {
+        "title": "Sujets 2026",
+        "introBefore": "Ces sujets ont été inspirés par Dieu et confiés à notre équipe pour l’année 2026. Touchez une date pour accéder directement à cette semaine. Si vous souhaitez diriger la ligne de prière ou apporter un message, veuillez",
+        "volunteerLink": "cliquer ici",
+        "introAfter": "pour remplir notre formulaire de bénévolat.",
+        "prev": "Préc.",
+        "next": "Suiv.",
+        "today": "Aujourd’hui",
+        "jumpToCurrentWeek": "Aller à la semaine en cours",
+        "topicFor": "Sujet pour",
+        "noTopic": "Aucun sujet trouvé pour cette semaine.",
+        "selectedWeek": "semaine sélectionnée",
+        "note": "Remarque : ces sujets peuvent être modifiés à la discrétion de l’équipe."
+    },
+    "creed": {
+        "title": "Notre credo",
+        "introBefore": "Nous sommes un ministère non confessionnel, unis autour des principes fondamentaux suivants de la foi chrétienne. Aidez-nous à faire connaître ce ministère en partageant",
+        "flyerLink": "notre flyer",
+        "introAfter": "sur les réseaux sociaux, ou avec votre famille et vos amis.",
+        "tapToExpand": "Touchez pour développer"
+    },
+    "reunion": {
+        "title": "Réunion POWER 2026",
+        "intro": "Remplissez le formulaire d’inscription ci-dessous et soumettez votre paiement pour réserver votre place.",
+        "formTitle": "Formulaire d’inscription",
+        "fields": {
+            "firstName": "Prénom",
+            "lastName": "Nom de famille",
+            "street1": "Adresse",
+            "street2": "Adresse ligne 2",
+            "city": "Ville",
+            "state": "État / Province",
+            "postal": "Code postal",
+            "country": "Pays",
+            "maritalStatus": "Statut matrimonial",
+            "phone": "Numéro de téléphone",
+            "email": "Courriel"
+        },
+        "placeholders": {
+            "firstName": "Prénom",
+            "lastName": "Nom de famille",
+            "street1": "Adresse",
+            "street2": "Appartement, suite, unité, etc.",
+            "city": "Ville",
+            "state": "État / Province",
+            "postal": "Code postal",
+            "selectCountry": "Veuillez sélectionner",
+            "phone": "(000) 000-0000",
+            "email": "ex : monnom@exemple.com"
+        },
+        "marital": {
+            "married": "Marié(e)",
+            "engaged": "Fiancé(e)",
+            "single": "Célibataire"
+        },
+        "registrationFee": "Frais d’inscription",
+        "perPerson": "par personne",
+        "price": "Prix",
+        "quantity": "Quantité",
+        "summary": {
+            "subtotal": "Sous-total",
+            "tax": "Taxe",
+            "total": "Total"
+        },
+        "paypal": {
+            "line1": "Nous utilisons PayPal comme passerelle de paiement. Cependant, vous n’avez pas besoin d’un compte PayPal pour payer les frais d’inscription.",
+            "line2": "Si vous n’avez pas de compte PayPal, choisissez Payer avec une carte de débit ou de crédit lors du paiement.",
+            "imageAlt": "Option de paiement par carte de débit ou de crédit"
+        },
+        "submit": "Soumettre l’inscription et payer",
+        "secure": "Formulaire d’inscription sécurisé",
+        "notes": {
+            "title": "Notes d’inscription",
+            "whoFor": {
+                "title": "À qui cela s’adresse",
+                "body": "Remplissez une inscription par participant, ou augmentez la quantité si vous payez pour plusieurs personnes."
+            },
+            "confirmation": {
+                "title": "Confirmation",
+                "body": "Assurez-vous d’utiliser une adresse courriel que vous consultez régulièrement afin de recevoir les mises à jour et la confirmation de paiement."
+            },
+            "phone": {
+                "title": "Numéro de téléphone",
+                "body": "Ajouter votre numéro de téléphone est facultatif, mais utile au cas où l’équipe aurait besoin de vous contacter rapidement."
+            }
+        }
+    }
+}

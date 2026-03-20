@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { CheckCircle, ArrowRight, HeartHandshake } from "lucide-react";
 import { Reveal } from "../components/Motion";
 import Section from "../components/Section";
@@ -7,13 +8,13 @@ import Button from "../components/ui/Button";
 import Badge from "../components/ui/Badge";
 
 export default function ThankYou() {
+  const { t } = useTranslation();
   return (
     <div className="space-y-10">
       <Reveal>
-        <Section title="Thank You!">
+        <Section title={t("thankYou.title")}>
           <p className="text-lg text-power-ink/75 dark:text-white/75 max-w-2xl">
-            Your message has been received. We truly appreciate you taking the
-            time to reach out and connect with the POWER Prayer Line family.
+            {t("thankYou.intro")}
           </p>
         </Section>
       </Reveal>
@@ -29,31 +30,29 @@ export default function ThankYou() {
             </div>
 
             <h2 className="text-2xl md:text-3xl font-black text-power-ink dark:text-white">
-              We’re grateful for you
+              {t("thankYou.heading")}
             </h2>
 
             <p className="mt-4 text-power-ink/70 dark:text-white/70 leading-relaxed">
-              Whether this was a prayer request, a question, or a willingness to
-              serve, please know that your submission matters to us.
-              Someone from the ministry will follow up as soon as possible.
+              {t("thankYou.body")}
             </p>
 
             <div className="mt-6 flex justify-center">
               <Badge color="cyan">
                 <span className="inline-flex items-center gap-2">
                   <HeartHandshake className="h-4 w-4" />
-                  You are part of the POWER family
+                  {t("thankYou.badge")}
                 </span>
               </Badge>
             </div>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Button as="a" href="/" variant="primary">
-                Back to Home <ArrowRight className="h-4 w-4" />
+                {t("thankYou.backHome")} <ArrowRight className="h-4 w-4" />
               </Button>
 
               <Button as="a" href="/topics-2026" variant="secondary">
-                View 2026 Topics
+                {t("home.hero.viewTopics")}
               </Button>
             </div>
           </div>
