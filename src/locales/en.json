@@ -24,7 +24,7 @@
             "internationalFamily": "International family"
         },
         "hero": {
-            "title": "Plug into the POWER of Prayer",
+            "title": "Experience the POWER of Prayer",
             "introBefore": "POWER stands for",
             "powerMeaning": "Promoters Of the Word Empowering Reality",
             "introAfter": "We are a community of Christians, largely of Haitian heritage, committed to ongoing spiritual growth through love, daily prayer, and the Bible study.",
@@ -135,7 +135,7 @@
         "download": "Download Flyer",
         "open": "Open Full Size",
         "tip": "Tip: On mobile, long-press the image to save it directly to your phone and share it via text or social media.",
-        "link": "/src/assets/POWER_Prayer_Line_Flyer.jpg"
+        "link": "/POWER_Prayer_Line_Flyer.jpg"
     },
     "volunteer": {
         "title": "Volunteer to Lead or Speak",
