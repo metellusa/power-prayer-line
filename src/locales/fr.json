@@ -135,7 +135,7 @@
         "download": "Télécharger le flyer",
         "open": "Ouvrir en taille réelle",
         "tip": "Astuce : Sur mobile, maintenez votre doigt appuyé sur l’image pour l’enregistrer directement sur votre téléphone et la partager par message ou sur les réseaux sociaux.",
-        "link": "../src/assets/POWER_French_Flyer.jpg"
+        "link": "/src/assets/POWER_French_Flyer.jpg"
     },
     "volunteer": {
         "title": "Diriger ou prêcher sur la ligne",

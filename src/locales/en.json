@@ -135,7 +135,7 @@
         "download": "Download Flyer",
         "open": "Open Full Size",
         "tip": "Tip: On mobile, long-press the image to save it directly to your phone and share it via text or social media.",
-        "link": "../src/assets/POWER_Prayer_Line_Flyer.jpg"
+        "link": "/src/assets/POWER_Prayer_Line_Flyer.jpg"
     },
     "volunteer": {
         "title": "Volunteer to Lead or Speak",
