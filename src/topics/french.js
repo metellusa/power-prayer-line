@@ -17,7 +17,7 @@ export const topicsRaw = [
 
   "Apr 5 to Apr 11 - La puissance de la résurrection (1 Corinthiens 15:20–22)",
   "Apr 12 to Apr 18 - Une vie nouvelle en Christ (2 Corinthiens 5:17)",
-  "Apr 19 to Apr 25 - Vivre comme des hommes et des femmes de résurrection (Romains 6:4)",
+  "Apr 19 to Apr 25 - Quand le ciel semble être silencieux: prier à travers des saisons de delai (Daniel 10)",
 
   "Apr 26 to May 2 - L’oisiveté et son danger (Jacques 4:17)",
   "May 3 to May 9 - Une vie d’obéissance (Jean 14:15)",
