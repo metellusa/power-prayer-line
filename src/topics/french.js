@@ -54,8 +54,8 @@ export const topicsRaw = [
 
   "Nov 1 to Nov 7 - Un cœur reconnaissant (1 Thessaloniciens 5:18)",
   "Nov 8 to Nov 14 - 21eme Anniversaire de POWER",
-  "Nov 15 to Nov 21 - Reconnaissants en toutes circonstances (Psaume 107:1)",
-  "Nov 22 to Nov 28 - Se souvenir de la fidélité de Dieu (Lamentations 3:22–23)",
+  "Nov 15 to Nov 21 - Se souvenir de la fidélité de Dieu (Lamentations 3:22–23)",
+  "Nov 22 to Nov 28 - Reconnaissants en toutes circonstances (Psaume 107:1)",
 
   "Nov 29 to Dec 5 - Une espérance qui ne déçoit pas (Romains 5:5)",
   "Dec 6 to Dec 12 - Heureux ceux qui procurent la paix (Matthieu 5:9)",

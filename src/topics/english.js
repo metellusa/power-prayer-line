@@ -54,8 +54,8 @@ export const topicsRaw = [
 
   "Nov 1 to Nov 7 - A Heart of Gratitude (1 Thessalonians 5:18)",
   "Nov 8 to Nov 14 - 21st POWER Anniversary",
-  "Nov 15 to Nov 21 - Thankful in All Circumstances (Psalm 107:1)",
-  "Nov 22 to Nov 28 - Remembering God’s Faithfulness (Lamentations 3:22–23)",
+  "Nov 15 to Nov 21 - Remembering God’s Faithfulness (Lamentations 3:22–23)",
+  "Nov 22 to Nov 28 - Thankful in All Circumstances (Psalm 107:1)",
 
   "Nov 29 to Dec 5 - Hope That Does Not Disappoint (Romans 5:5)",
   "Dec 6 to Dec 12 - Peacemakers in a Divided World (Matthew 5:9)",
