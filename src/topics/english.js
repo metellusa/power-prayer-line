@@ -17,7 +17,7 @@ export const topicsRaw = [
 
   "Apr 5 to Apr 11 - The Power of the Resurrection (1 Corinthians 15:20–22)",
   "Apr 12 to Apr 18 - New Life in Christ (2 Corinthians 5:17)",
-  "Apr 19 to Apr 25 - Living as Resurrection People (Romans 6:4)",
+  "Apr 19 to Apr 25 - When Heaven Feels Silent: Praying Through Seasons of Delay (Daniel 10)",
 
   "Apr 26 to May 2 - Idleness and Its Danger (James 4:17)",
   "May 3 to May 9 - A Life of Obedience (John 14:15)",
