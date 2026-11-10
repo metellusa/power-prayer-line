@@ -53,7 +53,7 @@ export const topicsRaw = [
   "Oct 25 to Oct 31 - Living as Light in Darkness (Matthew 5:14–16)",
 
   "Nov 1 to Nov 7 - A Heart of Gratitude (1 Thessalonians 5:18)",
-  "Nov 8 to Nov 14 - Contentment in Christ (Philippians 4:11–13)",
+  "Nov 8 to Nov 14 - 21st POWER Anniversary",
   "Nov 15 to Nov 21 - Thankful in All Circumstances (Psalm 107:1)",
   "Nov 22 to Nov 28 - Remembering God’s Faithfulness (Lamentations 3:22–23)",
 

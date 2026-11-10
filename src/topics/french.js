@@ -53,7 +53,7 @@ export const topicsRaw = [
   "Oct 25 to Oct 31 - Vivre comme la lumière dans les ténèbres (Matthieu 5:14–16)",
 
   "Nov 1 to Nov 7 - Un cœur reconnaissant (1 Thessaloniciens 5:18)",
-  "Nov 8 to Nov 14 - Le contentement en Christ (Philippiens 4:11–13)",
+  "Nov 8 to Nov 14 - 21eme Anniversaire de POWER",
   "Nov 15 to Nov 21 - Reconnaissants en toutes circonstances (Psaume 107:1)",
   "Nov 22 to Nov 28 - Se souvenir de la fidélité de Dieu (Lamentations 3:22–23)",
 
